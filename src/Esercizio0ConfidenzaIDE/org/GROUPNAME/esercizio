@@ -1,0 +1,60 @@
+Creare i seguenti package e classi seguendo le istruzioni:
+
+
+Package org.GROUPNAME.model
+
+    Creare una class Item con i seguenti attributi:
+
+        name
+
+        value
+
+    Far generare automaticamente all'IDE:
+
+        i metodi di get e set per entrambi gli attributi
+
+        un costruttore appropriato
+
+    Creare una classe Person con i seguenti attributi:
+
+        name
+
+        age
+
+        ownedItems (array list che conterrà gli item che la persona possiede)
+
+    Far generare automaticamente all'IDE:
+
+        i metodi di get e set per entrambi gli attributi
+
+        un costruttore appropriato
+
+    Scrivere i metodi:
+
+        addItem: aggiunge un item alla collezione
+
+        removeItem: rimuove un item se esiste
+
+    Scrivere il metodo:
+
+        totalValue: restituisce la somma del valore degli oggetti posseduti dalla persona
+
+
+
+Package org.GROUPNAME.io
+
+    Creare una classe PrettyPrinter
+
+    Aggiungere il seguente metodo statico:
+
+        printPeople:
+
+            input: arraylist di persone
+
+            output: stampa a video quanto segue per ogni persona nell'array list:
+
+                riga di separazione (80 caratteri "-")
+
+                Name: <NOME> Age: <AGE> Owned Value: <SOMMA VALORE OGGETTI POSSEDUTI>
+
+                riga di separazione (80 caratteri "-")
