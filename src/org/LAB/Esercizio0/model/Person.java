@@ -1,4 +1,4 @@
-package Esercizio0ConfidenzaIDE.org.GROUPNAME.model;
+package org.LAB.Esercizio0.model;
 
 import java.util.ArrayList;
 

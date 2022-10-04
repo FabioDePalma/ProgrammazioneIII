@@ -1,6 +1,6 @@
-package Esercizio0ConfidenzaIDE.org.GROUPNAME.io;
+package org.LAB.Esercizio0.io;
 
-import Esercizio0ConfidenzaIDE.org.GROUPNAME.model.Person;
+import org.LAB.Esercizio0.model.Person;
 
 import java.util.ArrayList;
 

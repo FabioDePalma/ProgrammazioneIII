@@ -1,8 +1,8 @@
-package Esercizio0ConfidenzaIDE.org.GROUPNAME;
+package org.LAB.Esercizio0;
 
-import Esercizio0ConfidenzaIDE.org.GROUPNAME.io.PrettyPrinter;
-import Esercizio0ConfidenzaIDE.org.GROUPNAME.model.Item;
-import Esercizio0ConfidenzaIDE.org.GROUPNAME.model.Person;
+import org.LAB.Esercizio0.io.PrettyPrinter;
+import org.LAB.Esercizio0.model.Item;
+import org.LAB.Esercizio0.model.Person;
 
 import java.util.ArrayList;
 
