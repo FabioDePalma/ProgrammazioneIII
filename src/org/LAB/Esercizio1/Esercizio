@@ -1,0 +1,33 @@
+Sviluppare la classe Polygon, e le sottoclassi Rectangle, Parallelogram e Triangle,
+che rappresentano in modo semplificato (senza grafica) le relative figure geometriche.
+Definire variabili e metodi fattorizzando i componenti in comune tra le varie classi e usando classi e metodi astratti,
+se necessario, per definire le funzionalità che saranno poi implementate in modo specifico nelle varie sottoclassi.
+
+Le figure geometriche da modellare hanno come proprietà:
+    il numero dei vertici
+    la base
+    l'altezza
+e offrono i metodi getNumVertices() e getArea() che restituiscono, rispettivamente, il numero di vertici e l'area del poligono.
+I rettangoli offrono anche il metodo getPerimeter().
+Nota: Come è meglio modellare base e altezza?
+Ha senso metterli nella classe Polygon?
+Cosa succede se si vuole definire un poligono tale per cui
+il concetto di base e altezza ha poco senso (ad es. una stella a cinque punte)?
+
+Sviluppare una classe Geometries che gestisce un elenco di oggetti Polygon e permette di conoscere le loro proprietà
+(numero di vertici, area, etc.). NB: L'elenco di poligoni negli oggetti di tipo Geometries non deve contenere duplicati,
+ove per duplicati si intendono due poligoni dello stesso tipo e con uguali proprietà (per es. due rettangoli con altezza e base uguali).
+
+Utilizzare i meccanismi di riflessione per sviluppare correttamente i metodi che gestiscono gli oggetti.
+La classe Geometries deve offrire metodi per inserire un poligono in elenco, contare quanti poligoni sono contenuti nell'elenco, etc.
+
+Sviluppare un'applicazione di prova delle classi sopra.
+L'applicazione chiederà all'utente di fornire i dati dei poligoni da inserire in elenco e visualizzerà a video le proprietà dei poligoni inseriti.
+Attenzione a rispettare i ruoli delle varie classi, ad esempio evitate di inserire metodi di input/output nelle classi modello.
+Vi suggeriamo tre possibili soluzioni, potete scegliere quella che preferite o proporne una voi:
+    effettuare input/output e creazione oggetti dal main;
+inserire i seguenti metodi astratti in polygon:
+    describeAttributes: restituisce un array di stringhe contenente la descrizione di quali attributi sono necessari per descrivere il modello (es., [ ["base"],["height"] ])
+    setAttributes: prende in input un array di Float che descrive i valori degli attributi nell'ordine indicato da describeAttributes e li assegna agli attributi corrispondenti.
+
+utilizzare i meccanismi di riflessione per determinare quali sono gli attributi da fornire al poligono e settarli.
