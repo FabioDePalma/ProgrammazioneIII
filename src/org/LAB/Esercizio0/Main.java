@@ -4,6 +4,7 @@ import org.LAB.Esercizio0.io.PrettyPrinter;
 import org.LAB.Esercizio0.model.Item;
 import org.LAB.Esercizio0.model.Person;
 
+
 import java.util.ArrayList;
 
 public class Main {
@@ -39,5 +40,7 @@ public class Main {
 
         PrettyPrinter print = new PrettyPrinter();
         print.printPeople(persone);
+
+
     }
 }
