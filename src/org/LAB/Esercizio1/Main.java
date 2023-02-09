@@ -1,5 +1,10 @@
 package org.LAB.Esercizio1;
 
+import org.LAB.Esercizio1.model.Geometries;
+import org.LAB.Esercizio1.model.Parallelogram;
+import org.LAB.Esercizio1.model.Rectangle;
+import org.LAB.Esercizio1.model.Triangle;
+
 public class Main {
     public static void main(String[] args) {
         Geometries g = new Geometries();

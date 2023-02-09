@@ -1,4 +1,4 @@
-package org.LAB.Esercizio1;
+package org.LAB.Esercizio1.model;
 
 public class Triangle extends Polygon{
 

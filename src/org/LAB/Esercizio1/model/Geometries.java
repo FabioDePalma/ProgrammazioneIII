@@ -1,4 +1,4 @@
-package org.LAB.Esercizio1;
+package org.LAB.Esercizio1.model;
 
 import java.util.ArrayList;
 

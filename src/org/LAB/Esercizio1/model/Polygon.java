@@ -1,4 +1,4 @@
-package org.LAB.Esercizio1;
+package org.LAB.Esercizio1.model;
 
 public abstract class  Polygon implements Comparable{
 

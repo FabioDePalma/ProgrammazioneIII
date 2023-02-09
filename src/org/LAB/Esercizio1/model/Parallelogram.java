@@ -1,14 +1,15 @@
-package org.LAB.Esercizio1;
+package org.LAB.Esercizio1.model;
 
-public class Rectangle extends Polygon {
+public class Parallelogram extends Polygon{
 
-    public Rectangle(int b, int h){
+
+    public Parallelogram(int b, int h){
         super(4,b,h);
     }
 
     @Override
     public void print() {
-        System.out.println("I'm a Rectangle");
+        System.out.println("I'm a Parallelogram");
     }
 
 
@@ -21,18 +22,14 @@ public class Rectangle extends Polygon {
         return (this.getBase()*this.getHeight())*2;
     }
 
-
     @Override
     public int compareTo(Object o) {
         if (o != null && o.getClass() == this.getClass()) {
-            Rectangle r = (Rectangle) o;
-            return this.getArea() - r.getArea();
+            Parallelogram p = (Parallelogram) o;
+            return this.getArea() - p.getArea();
         }else {
             return Integer.MIN_VALUE;
         }
     }
-
-
-
 
 }
