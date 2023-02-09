@@ -1,6 +1,6 @@
 package teoria.d.input_output.g.scritturaFile;
 
-import teoria.d.input_output.g.scritturaFile.Lettura;
+
 
 import java.io.*;
 
