@@ -1,44 +1,15 @@
-package teoria.e.GUIOld.f.testButton; /**
- * @version 1.32 2004-05-04
- * @author Cay Horstmann
- */
+package teoria.e.GUIOld.f.testButton.buttonTest3;
 
-// ButtonPanel implementa l'ActionListener
-
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
-
-public class ButtonTest3 {
-    public static void main(String[] args) {
-        ButtonFrame3 frame = new ButtonFrame3();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
-    }
-}
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
- A frame with a button panel
+ * A panel with three buttons.
  */
-class ButtonFrame3 extends JFrame {
-    public static final int DEFAULT_WIDTH = 300;
-    public static final int DEFAULT_HEIGHT = 200;
-
-    public ButtonFrame3() {
-        setTitle("ButtonTest");
-        setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
-
-        // add panel to frame
-        ButtonPanel3 panel = new ButtonPanel3();
-        add(panel);
-    }
-}
-
-/**
- A panel with three buttons.
- */
-class ButtonPanel3 extends JPanel implements ActionListener {
-    public ButtonPanel3() {
+class ButtonPanel extends JPanel implements ActionListener {
+    public ButtonPanel() {
         // create buttons
         JButton yellowButton = new JButton("Yellow");
         JButton blueButton = new JButton("Blue");
@@ -63,6 +34,3 @@ class ButtonPanel3 extends JPanel implements ActionListener {
         else if (command.equals("Red")) setBackground(Color.RED);
     }
 }
-
-
-

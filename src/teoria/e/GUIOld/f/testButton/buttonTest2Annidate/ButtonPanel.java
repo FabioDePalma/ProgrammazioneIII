@@ -1,4 +1,4 @@
-package teoria.e.GUIOld.f.testButton; /**
+package teoria.e.GUIOld.f.testButton.buttonTest2Annidate; /**
  * @version 1.32 2004-05-04
  * @author Cay Horstmann
  */
@@ -7,35 +7,10 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class ButtonTestAnnidate {
-    public static void main(String[] args) {
-        ButtonFrame2 frame = new ButtonFrame2();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
-    }
-}
-
-/**
- A frame with a button panel
- */
-class ButtonFrame2 extends JFrame {
-    public static final int DEFAULT_WIDTH = 300;
-    public static final int DEFAULT_HEIGHT = 200;
-
-    public ButtonFrame2() {
-        setTitle("ButtonTest");
-        setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
-
-        // add panel to frame
-        ButtonPanel2 panel = new ButtonPanel2();
-        add(panel);
-    }
-}
-
 /**
  A panel with three buttons.
  */
-class ButtonPanel2 extends JPanel {
+class ButtonPanel extends JPanel {
 
     /**
      An action listener that sets the panel's background color.
@@ -53,7 +28,7 @@ class ButtonPanel2 extends JPanel {
         }
     }
 
-    public ButtonPanel2() {
+    public ButtonPanel() {
         // create buttons
         JButton yellowButton = new JButton("Yellow");
         JButton blueButton = new JButton("Blue");
