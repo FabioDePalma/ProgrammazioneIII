@@ -163,3 +163,15 @@ sette metodi:
 - windowActivated(WindowEvent e)
 - windowClosing(WindowEvent e)
 - ecc
+
+Se a noi interessa solo il metodo windowClosing, per implementare correttamente l'interfaccia dovremmo comunque definire anche gli altri sei metodi.
+
+Per risparmiare la fatica Java fornisce  la classe
+**WindowAdapter**, che implementa l'interfaccia **WindowListener**
+con i sette metodi che non fanno nulla.\
+Noi dovremo solo estendere questa classe ridefinendo i
+metodi che ci interessano. Nel nostro caso solo
+**windowClosing**.\
+<sub>vedi  Beeper4ButtonListenerConAdapter<\sub>
+
+
