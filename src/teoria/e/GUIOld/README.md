@@ -174,4 +174,6 @@ metodi che ci interessano. Nel nostro caso solo
 **windowClosing**.\
 <sub>vedi  Beeper4ButtonListenerConAdapter<\sub>
 
+Il problema degli adapter è che non possiamo estendere altre classi perchè abbiamo l'ereditarietà singola.
+
 
