@@ -12,19 +12,19 @@ In ogni caso, programmi Java che usano SWING, devono spesso usare anche classi A
 Il componente di più alto livello di una interfaccia grafica è una finestra, realizzata dalla classe **JFrame**
 ```javascript
 private static void mainOnEventDispatchThread() {
-            // Create frame with title "Hello, World!"
-            JFrame f = new JFrame("Hello, World!");
-            // Dimensione della finestra
-            f.setSize(400, 200);
+    // Create frame with title "Hello, World!"
+    JFrame f = new JFrame("Hello, World!");
+    // Dimensione della finestra
+    f.setSize(400, 200);
 
-            // Fa sì che il frame richieda alla JVM di terminare il programma
-            // quando la finestra viene chiusa.
-            f.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
+    // Fa sì che il frame richieda alla JVM di terminare il programma
+    // quando la finestra viene chiusa.
+    f.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
 
-            f.add(new JLabel("Hello, World!"));
+    f.add(new JLabel("Hello, World!"));
 
-            f.setVisible(true);
-    }
+    f.setVisible(true);
+}
 ```
 Inoltre, si può creare una classe che estende JFrame, e che nel suo costruttore ha tutti gli elementi del tipo di finestra desiderato:
 ```java
@@ -33,7 +33,7 @@ class Myframe extends JFrame {
         super(s);
         setSize(400, 200);
         //add(new JLabel("ciao"));
-    }  
+    }
 }
 ```
 Per aggiungere un Bottone abbiamo la classe **JButton**\
@@ -59,7 +59,7 @@ In Java **gli eventi sono Oggetti** derivati dalla classe EventObject.\
 Esistono due tipi di eventi:
 - **eventi semantici**: che fanno riferimento a quello che l'utente
   fa su componenti "virtuali" dell'interfaccia (premere un
-  pulsante, selezionare la voce di un menu, ...) 
+  pulsante, selezionare la voce di un menu, ...)
 - **eventi low-level**: ossia eventi fisici relativi al mouse o alla
   tastiera (tasto premuto, tasto rilasciato, mouse trascinato, ...)
 
@@ -90,10 +90,10 @@ La classe **ActionEvent** fornisce (fra l'altro) i metodi:
 - String getActionCommand()
 - Object getSource()
 
-Il rispettivo **Listener** deve implementare l'interfaccia 
+Il rispettivo **Listener** deve implementare l'interfaccia
 ```java
 interface ActionListener {
-    void actionPerformed(ActionEvent e); 
+    void actionPerformed(ActionEvent e);
 }
 ```
 Per registrare l'**ActionListener** nel bottone, si usa il metodo della classe **JButton**
@@ -122,17 +122,17 @@ possono generare eventi di tipo **XXX**, ci sarà:
 Alcune Interface prevedono tantissimi possibili eventi per gestire i vari tipi  di evento lanciati dalla sorgente degli eventi.\
 Per esempio:
 - **MouseListener**:
-  - mouseExited(MouseEvent), 
-  - mousePressed(MouseEvent), 
-  - mouseReleased(MouseEvent), 
-  - mouseEntered(MouseEvent)
+    - mouseExited(MouseEvent),
+    - mousePressed(MouseEvent),
+    - mouseReleased(MouseEvent),
+    - mouseEntered(MouseEvent)
 - **WindowListener**:
-  - windowClosing(WindowEvent), 
-  - windowOpened(WindowEvent), 
-  - windowIconified(WindowEvent), 
-  - windowDeiconified(WindowEvent), 
-  - windowClosed(WindowEvent),
-  - ecc....
+    - windowClosing(WindowEvent),
+    - windowOpened(WindowEvent),
+    - windowIconified(WindowEvent),
+    - windowDeiconified(WindowEvent),
+    - windowClosed(WindowEvent),
+    - ecc....
 
 I pattern d'implementazione dell'interfaccia richiede che il listener che vogliamo sviluppiate implementi tutti i suoi metodi, cosa che potrebbe non essere rilevante(magari ci interessa gestire un solo tipo di evento)\
 Per questo motivo sono state introdotte le classi filtro, o **adapters**, che offrono le implementazioni di default delle interfacce dei listener con metodi che non fanno nulla\
