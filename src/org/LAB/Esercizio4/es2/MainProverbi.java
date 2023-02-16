@@ -18,6 +18,6 @@ public class MainProverbi {
         FinestraProverbi finestra = new FinestraProverbi();
         Proverbi model = new Proverbi(new ArrayList<>());
         Controller controller = new Controller(finestra, model);
-
+//test commit
     }
 }
