@@ -180,7 +180,10 @@ class ProvaRunnable2 {
 La variabile `i` viene incrementata due volte. Infatti esiste un unico oggetto di **MiaClasse**, legato alla
 variabile `r`, che ha una variabile locale `i`.\
 I Thread `t1` e `t2` eseguono entrambi il metodo `run()` di questo oggetto e incrementano la stessa variabile `i`.
+
+    
 ---
+    
 Naturalmente la computazione dei vari Thread può procedere con ordini diversi.\
 Ad esempio, il Thread del `main()` può terminare prima dei Thread `t1` e `t2`, oppure viceversa.
 
