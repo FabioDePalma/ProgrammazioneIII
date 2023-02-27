@@ -15,9 +15,11 @@ public class PingPongThreadPool {
         }
         exec.shutdown();
         try {
-            exec.awaitTermination(5, TimeUnit.SECONDS); //Blocks until all tasks
-                // have completed execution after a shutdown request,
-                // or the timeout occurs, or the current thread is interrupted, whichever happens first.
+            exec.awaitTermination(5, TimeUnit.SECONDS);
+                //Blocca finchè tutti i task
+                // hanno completato l'esecuzione dopo la richiesta di shutdown
+                // Oppure si verifica il timeout
+                // o il thread corrente viene interrotto, a seconda di quale evento si verifichi per primo.
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }

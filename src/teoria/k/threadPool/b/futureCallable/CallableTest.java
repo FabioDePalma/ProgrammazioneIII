@@ -30,7 +30,7 @@ public class CallableTest {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        System.out.println("\nIl totale �: " + total);
+        System.out.println("\nIl totale è: " + total);
         exec.shutdown();
     }
 }

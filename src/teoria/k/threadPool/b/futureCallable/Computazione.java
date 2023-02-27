@@ -19,6 +19,6 @@ class Computazione implements Callable<Integer> {
             System.out.println("Interruzione thread");
         }
         System.out.println("FINE computazione " + num + ": risultato = " + 2 * num);
-        return 2*num;
+        return 2*num; //return new Integer(2*num)
     }
 }
