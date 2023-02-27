@@ -16,10 +16,7 @@ class Receiver extends Thread {
                 sleep(1000);
                 System.out.println("leggi " + (char) in.read());
             }
-        } catch (IOException e) {
-            System.out.println("fine input");
-            //System.out.println(e.getMessage());
-        } catch (InterruptedException e) {
+        } catch (IOException | InterruptedException e) {
             System.out.println(e.getMessage());
         }
     }

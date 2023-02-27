@@ -11,14 +11,14 @@ class Sender extends Thread {
     }
 
     public void run() {
-        for (char c = 'A'; c <= 'F'; c++)
+        for (char c = 'A'; c <= 'F'; c++) {
             try {
                 System.out.println("scrivi " + c);
                 out.write(c);
                 sleep(1000);
-            } catch (IOException e) {
-            } catch (InterruptedException e) {
+            } catch (IOException | InterruptedException e) {
                 System.out.println(e.getMessage());
             }
+        }
     }
 }

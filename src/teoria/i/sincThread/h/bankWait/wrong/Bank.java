@@ -12,8 +12,7 @@ class Bank {
     }
 
     public void transfer(int from, int to, int amount) {
-        System.out.println("trasferimento da " + from + " a " + to +
-                " di " + amount);
+        System.out.println("trasferimento da " + from + " a " + to + " di " + amount);
         if (!accounts[from].withdraw(amount))
             return;
         accounts[to].deposit(amount);

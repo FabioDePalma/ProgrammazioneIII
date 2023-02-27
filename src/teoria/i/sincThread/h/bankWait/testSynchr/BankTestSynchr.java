@@ -9,7 +9,7 @@ class BankTestSynchr {
 		TransferThread[] tt = new TransferThread[num];
       	for (int i=0; i < num; i++) {
 			// se metto una soglia di prelevamento altissima rischio la non terminazione
-			// del programma perch� le operazioni di prelevamento si bloccano
+			// del programma perché le operazioni di prelevamento si bloccano
 			//tt[i] = new TransferThread(b,80000);
 			tt[i] = new TransferThread(b,8000);
 			tt[i].start();
