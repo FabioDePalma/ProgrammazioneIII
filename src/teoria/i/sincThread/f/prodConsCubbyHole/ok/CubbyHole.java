@@ -6,27 +6,25 @@ class CubbyHole {
     private boolean available = false;
 
     public synchronized int get() {
-        while (!available) {
+        while (!available) { //finchè available==false
             try {
                 wait();
-            } catch (InterruptedException e) {
-            }
+            } catch (InterruptedException e) {}
         }
         available = false;
-        /* fondamentale notifyAll(), anzich� notify(), per prevenire deadlock */
-        notifyAll();
+        /* fondamentale notifyAll(), anzichè notify(), per prevenire deadlock */
+        notifyAll(); //risveglio i thread in coda di wait
         return content;
     }
 
     public synchronized void put(int value) {
-        while (available) {
+        while (available) { //finchè available==true
             try {
                 wait();
-            } catch (InterruptedException e) {
-            }
+            } catch (InterruptedException e) {}
         }
         content = value;
         available = true;
-        notifyAll();
+        notifyAll(); //risveglio i thread in coda di wait
     }
 }
