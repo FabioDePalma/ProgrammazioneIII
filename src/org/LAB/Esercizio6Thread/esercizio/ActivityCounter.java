@@ -1,15 +1,12 @@
-package org.LAB.Esercizio6Thread.fabio;
+package org.LAB.Esercizio6Thread.esercizio;
 
 public class ActivityCounter {
     private int counter;
     public ActivityCounter(){
         counter = 0;
     }
-    public synchronized void setCounter(){
+    public synchronized void incrCounter(){
         counter++;
-    }
-    public synchronized int getCounter(){
-        return counter;
     }
 
     @Override
