@@ -15,7 +15,7 @@ import java.text.SimpleDateFormat;
 public class MatrixMaximum {
     final static int NROWS = 10000;
     final static int NCOLS = 10000;
-    final static int NUM_THREADS = 3;
+    final static int NUM_THREADS = 10;
 
     final static int NUM_REPETITIONS = 20;
 
