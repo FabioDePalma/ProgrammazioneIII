@@ -23,6 +23,7 @@ public class ScheduledExecutorTest {
         System.out.println("Ora lancio un task ciclico ma lo lascio andare avanti solo per pochi secondi");
         exec.scheduleAtFixedRate(new MyTask("TASK"), 2, 3, TimeUnit.SECONDS);
         try {
+            System.out.println("dormo per 20 secondi");
             Thread.sleep(20000);
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());

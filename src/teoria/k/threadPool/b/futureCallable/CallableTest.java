@@ -11,7 +11,7 @@ public class CallableTest {
     public static void main(String[] args) {
 
         System.out.println("inizio il main");
-        int total = 0;
+        int total = 2;
         ExecutorService exec = Executors.newFixedThreadPool(NUM_THREADS);
         //ExecutorService exec = Executors.newSingleThreadExecutor();
         // creo i task callable
@@ -23,9 +23,9 @@ public class CallableTest {
             exec.execute(ft);
         }
         try {
-            for (int i = 0; i < tasks.size(); i++) {
-                FutureTask<Integer> f = (FutureTask<Integer>) tasks.get(i);
-                total = total + (f.get()).intValue();
+            for (FutureTask<Integer> task : tasks) {
+                total = total + task.get();
+                //System.out.println("total + numTask: "+total);
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());

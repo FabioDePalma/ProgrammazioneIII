@@ -13,10 +13,11 @@ class PingPong implements Runnable {
     public void run() {
         for (int i = 1; i < 3; i++) {
             System.out.println(name + " " + Thread.currentThread().getName());
+
             try {
                 Thread.sleep(delay);
             } catch (InterruptedException e) {
-                return;
+                throw new RuntimeException(e);
             }
         }
         System.out.println("DONE! " + name + " " + Thread.currentThread().getName());
