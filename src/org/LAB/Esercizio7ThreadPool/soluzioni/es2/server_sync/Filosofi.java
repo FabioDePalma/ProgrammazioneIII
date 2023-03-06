@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 public class Filosofi {
 	public static void main(String[] args) {
-		int numPhilosophers = 3;
+		int numPhilosophers = 10;
 		ArrayList<Philosopher> phil = new ArrayList<>();
 
 		Chopstick left = new Chopstick();
