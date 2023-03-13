@@ -65,17 +65,16 @@ public class Client {
             out.writeObject(students);
             out.flush();
             in = new ObjectInputStream(soc.getInputStream());
+
             students = (List<Student>) in.readObject();
 
             System.out.println("Studenti dal client, dopo del invio: ");
             printStudents(students);
 
-            sleep(5000);
+            //sleep(5000);
 
         } catch (IOException | ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+             e.printStackTrace();
         }
     }
     public List<Student> generateStud(){

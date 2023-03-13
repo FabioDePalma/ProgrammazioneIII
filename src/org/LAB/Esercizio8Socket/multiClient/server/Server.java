@@ -1,16 +1,36 @@
 package org.LAB.Esercizio8Socket.multiClient.server;
 
-import org.LAB.Esercizio8Socket.resourses.Student;
-
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.List;
 
 public class Server {
+    ObjectInputStream in = null;
+    ObjectOutputStream out = null;
+    Socket connection = null;
+    ServerSocket s = null;
 
+
+    public static void main(String[] args) {
+        int i = 0;
+        try {
+            ServerSocket serverSocket = new ServerSocket(8080);
+            while(true){
+                Socket socket = serverSocket.accept();
+                System.out.println("E' arrivata una richiesta da parte di" + socket.getInetAddress() );
+                Thread t = new ServerThreadedHandlerStudent(socket, i);
+                i++;
+                t.start();
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+/*
     ObjectInputStream in = null;
     ObjectOutputStream out = null;
     Socket connection = null;
@@ -64,7 +84,10 @@ public class Server {
     public void waitConnection(){
         try {
             s = new ServerSocket(8080);
-            connection = s.accept();
+            while(true){
+                connection = s.accept();
+            }
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -98,5 +121,5 @@ public class Server {
             closeStreams();
             closeConnection();
         }
-    }
+    }*/
 }
